@@ -22,7 +22,7 @@ import com.lucasgmoraes.backend_project.repositories.ProductRepository;
 import com.lucasgmoraes.backend_project.repositories.UserRepository;
 
 @Configuration
-@Profile("test")
+@Profile("dev")
 public class TestConfig implements CommandLineRunner{
 
 	@Autowired
