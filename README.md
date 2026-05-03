@@ -48,7 +48,7 @@ A API está organizada por recursos, permitindo o gerenciamento completo (CRUD) 
 ## Como executar
 1. Clone o repositório:
    ```bash
-   git clone git@github.com:Lukasgmrs/workshop-springboot4-jpa.git
+   git clone https://github.com/Lukasgmrs/workshop-springboot4-jpa.git
 
 Importe o projeto em sua IDE (IntelliJ ou Eclipse) como um projeto Maven.
   
