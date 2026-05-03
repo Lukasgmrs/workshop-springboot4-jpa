@@ -17,20 +17,35 @@ O projeto foi estruturado seguindo o padrão de camadas, garantindo a separaçã
 - **Tratamento de Exceções:** Implementação de handlers para respostas de erro customizadas (ex: Recurso não encontrado).
 - **Seed de Banco de Dados:** Instanciação automática de dados de teste (Database Seeding) para perfis de desenvolvimento.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - **Linguagem:** Java 25
 - **Framework:** Spring Boot 4.0.6
 - **ORM:** JPA / Hibernate
 - **Banco de Dados:** H2 (Testes) e MySQL (Desenvolvimento)
 - **Ferramentas:** Maven, Postman, Spring Tools for Eclipse
 
-## 🛣️ Endpoints Principais
-- `GET /users` - Lista todos os usuários.
-- `GET /users/{id}` - Busca usuário por ID.
-- `GET /products` - Lista todos os produtos.
-- `GET /categories` - Lista categorias cadastradas.
+## Endpoints Principais
 
-## ⚙️ Como executar
+A API está organizada por recursos, permitindo o gerenciamento completo (CRUD) das principais entidades do sistema.
+
+### Usuários (`/users`)
+* `GET /users` - Retorna a lista de todos os usuários cadastrados.
+* `GET /users/{id}` - Retorna os detalhes de um usuário específico por ID.
+* `POST /users` - Registra um novo usuário no sistema.
+* `PUT /users/{id}` - Atualiza informações de um usuário (nome, email, telefone).
+* `DELETE /users/{id}` - Remove um usuário do banco de dados (com tratamento de exceção para integridade referencial).
+
+### Pedidos e Categorias (`/orders` & `/categories`)
+* `GET /orders` - Retorna todos os pedidos com seus respectivos status e clientes.
+* `GET /orders/{id}` - Busca um pedido detalhado, incluindo itens e informações de pagamento.
+* `GET /categories` - Lista as categorias de produtos (ex: Eletrônicos, Livros).
+* `GET /categories/{id}` - Retorna uma categoria específica e os produtos associados a ela.
+
+### Produtos (`/products`)
+* `GET /products` - Retorna a lista de todos os produtos com preços e descrições.
+* `GET /products/{id}` - Busca um produto específico pelo seu identificador.
+
+## Como executar
 1. Clone o repositório:
    ```bash
    git clone git@github.com:Lukasgmrs/workshop-springboot4-jpa.git
